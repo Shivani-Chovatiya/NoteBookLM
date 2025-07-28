@@ -13,9 +13,12 @@ const App = () => {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [pdfURL, setPdfURL] = useState(null);
   // Set PDF.js worker
+  // useEffect(() => {
+  //   pdfjsLib.GlobalWorkerOptions.workerSrc =
+  //     "/node_modules/pdfjs-dist/build/pdf.worker.min.js";
+  // }, []);
   useEffect(() => {
-    pdfjsLib.GlobalWorkerOptions.workerSrc =
-      "/node_modules/pdfjs-dist/build/pdf.worker.min.js";
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
   }, []);
 
   const simulateUpload = (file) => {
