@@ -1,0 +1,130 @@
+/* @import "tailwindcss"; */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #04266d;
+  --secondary-color: #ff914d;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.otp-input-container input {
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  width: 40rem;
+  height: 3rem;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 30%;
+  height: 10px;
+  background: #ccc; /* Gray background */
+  outline: none;
+  border-radius: 5px; /* Rounded corners */
+  margin: 0 10px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #007bff; /* Blue color for the range */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.percentage {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.diagonal-text {
+  display: inline-block;
+  transform: rotate(40deg); /* Adjust the angle as needed */
+}
+
+.line {
+  width: 100%;
+  position: relative;
+  margin: 16px 0;
+}
+
+.line::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #04266d;
+}
+
+/* For small screens */
+@media (max-width: 600px) {
+  .responsive-select {
+    font-size: 0.8rem; /* Adjust as needed */
+  }
+  .responsive-cell {
+    font-size: 1rem; /* Adjust as needed */
+  }
+}
+
+/* For medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .responsive-select {
+    font-size: 1rem; /* Adjust as needed */
+  }
+  .responsive-cell {
+    font-size: 1rem; /* Adjust as needed */
+  }
+}
+
+/* For large screens */
+@media (min-width: 1025px) {
+  .responsive-select {
+    font-size: 1.2rem; /* Adjust as needed */
+  }
+  .responsive-cell {
+    font-size: 1.2rem; /* Adjust as needed */
+  }
+}
+
+.char {
+  padding: 0 10px;
+  background: #eee;
+  font-size: 30px;
+}
+.char + .char {
+  margin-left: 5px;
+}
+.sep {
+  padding: 0 2px;
+}
+
+.studyHoursCircle {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23EC3463' stroke-width='4' stroke-dasharray='40' stroke-dashoffset='76' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border-radius: 100px;
+}
